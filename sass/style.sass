@@ -1,0 +1,408 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap')
+
+@font-face
+  font-family: 'SF Pro Display'
+  src: url('../fonts/SFProDisplay-Regular.eot')
+  src: url('../fonts/SFProDisplay-Regular.eot?#iefix') format("embedded-opentype"), url('../fonts/SFProDisplay-Regular.woff') format("woff"), url('../fonts/SFProDisplay-Regular.ttf') format("truetype")
+  font-weight: normal
+  font-style: normal
+
+body
+  font-family: Open Sans
+  font-size: 14px
+
+*,input
+  box-sizing: border-box
+.container
+  max-width: 1234.46px
+  position: relative
+  margin: 0 auto
+  
+
+.header
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+  &__top //HEADER__TOP--------------------------->
+    margin-top: 12px
+    width: 100%
+    background: #FED600
+    font-weight: 600
+    line-height: 32px
+    &-box
+      display: flex
+
+  &__drdown
+    position: relative
+    cursor: pointer
+    &:after
+      display: block
+      position: absolute
+      content: ''
+      width: 7px
+      height: 7px
+      border-top: 2px solid #000
+      border-right: 2px solid #000
+      transform: rotate(136deg)
+      right: -18px
+      top: 11px
+      cursor: pointer
+  &__tel
+    margin-left: 40px
+    margin-right: 20px
+    min-width: 113px
+    height: 18px
+  &__director
+    margin: 0 32px 0 20px
+  &__soc-icon
+    text-decoration: none
+    margin-left: 20px
+
+  &__logo
+    margin-top: 16px
+    margin-bottom: 16px
+    font-style: italic
+    font-size: 13px
+    line-height: 18px
+    display: flex
+    align-items: center
+    transition:all .5s ease-in-out
+   
+    span
+      color: red
+      font-weight: bold
+    &-img
+      width: 64px
+    &-icon
+      width: 100%
+    &-text
+      min-width: 135px
+      margin-left: 16px
+  
+  &__img
+    width: 105px
+    height: 60px
+    margin-top: 24px
+    margin-left: 32px
+    padding: 5px 12px
+    box-shadow: 0 0 10px #999
+    border-radius: 10px
+    img
+      width: 100%
+      // height: 100%
+      margin: 0
+      display: flex
+      align-items: center
+  &__form
+    width: 100%
+    position: relative
+  &__input
+    width: 100%
+    height: 44px
+    padding-left: 16px
+    border: 1px solid #BDBDBD
+    border-radius: 5px
+    outline: none
+  &__btn-search
+    position: absolute
+    color: #D2001C
+    padding: 9px 16px
+    background-color: #fff
+    outline: none
+    right: 3px
+    top: 3px
+    border: 2px solid #D2001C
+    box-sizing: border-box
+    border-radius: 4px
+    cursor: pointer
+  &__btn-inter
+    font-weight: 600
+    position: relative
+    margin-top: 5px
+    margin-left: 65px
+    cursor: pointer
+    transition:all .5s ease-in-out
+
+    &:before
+      content: ''
+      width: 20px
+      height: 20px
+      background: url('../img/Frame.svg') center no-repeat
+      background-size: cover
+      position: absolute
+      left: -25px
+      top: 0
+  &__btn-basket
+    position: relative
+    width: 158px
+    height: 30px
+    margin-left: 32px
+    padding-left: 32px
+    color: #fff
+    outline: none
+    background-color:#D2001C
+    border-radius: 10%
+    border: none
+    cursor: pointer
+    transition:all .5s ease-in-out
+
+    &:before
+      content: ''
+      width: 20px
+      height: 20px
+      background: url('../img/basket.svg') center no-repeat
+      background-size: cover
+      position: absolute
+      left: 18px
+      top: 5px
+  &__link
+    text-decoration: none
+    color: #222
+
+    //-----BURGER------------------->
+#check
+  display: none
+#check:checked ~ .burger__menu
+    left: -2vw
+    display: flex
+    z-index: 1
+.burger
+  position: relative
+  display: none
+  margin: 36px 20px
+  width: 30px
+  top: -100px
+  &__menu
+    width: 100vw
+    position: absolute
+    flex-direction: column
+    top: 58px
+    left: -110vw
+    background: #fff
+    padding: 0
+    z-index: 1
+    transition: .5s
+  &__link
+    position: relative
+    display: block
+    text-align: center
+    list-style: none
+    font-weight: bold
+
+    cursor: pointer
+    padding: 5px
+    border-top: 1px solid #ccc
+    &:hover
+      background: #ccc
+  label
+    display: block
+    width: 100%
+    
+    outline: 1px solid #f0f
+  span
+    display: block
+    width: 100%
+    height: 4px
+    margin-top: 5px
+    background: #000
+    transition: .5s
+ 
+#check:checked ~ .burger__menu
+  position: relative
+  // left: -2vw
+  display: flex
+  z-index: 1
+#check:checked ~ label span
+  &:nth-child(1)
+    transform: translateY(4px) rotate(45deg)
+  &:nth-child(2)
+    display: none
+  &:nth-child(3)
+    transform: translateY(-4px) rotate(-45deg)
+
+
+.drdown//--DRDOWN-------------------------->
+  background: #fff
+  box-shadow: 0px 10px 25px #ccc
+  &__menu
+
+    width: 100%
+    display: flex
+    justify-content: space-around
+    align-items: center
+    padding-top: 16px
+    transition: .5s
+  &__cols
+    width: 100%
+    display: flex
+    align-items: center
+  &__col
+    display: flex
+    &:nth-child(2)
+      flex:  0 0 42.5%
+      margin-left: 32px
+    &:nth-child(3)
+      flex:  0 0 20%
+
+  //HEADER__MENU-items-------------------------->
+    
+  &__item
+    width: 100%
+    display: flex
+    justify-content: space-around
+    align-items: center
+    padding-top: 16px
+
+    &:nth-child(2)
+      padding-bottom: 21px
+      border-bottom: 1px solid #ccc
+    &:nth-child(3)
+      padding-bottom: 20px
+
+  &__link
+    position: relative
+    display: block
+    text-align: center
+    list-style: none
+    font-weight: bold
+    margin: 0
+    padding: 0
+    cursor: pointer
+
+    &:after
+      display: block
+      position: absolute
+      content: ''
+      width: 10px
+      height: 7px
+      right: -16px
+      top: 5px
+      background: url('../img/Vector.png') center no-repeat
+      background-size: contain
+      cursor: pointer
+
+.team3D//--------TEAM3D-------------------------->
+  img
+    display: block
+    max-width: 100%
+  &__items
+    font-family: 'SF Pro Display'
+    margin-top: 51px
+    display: flex
+    justify-content: space-between
+  &__job
+    width: 430px
+  &__title
+    margin: 0
+    font-family: SF Pro Display;
+    font-size: 27px
+    line-height: 32px
+  &__btn
+    margin-top: 40px
+    width: 280px
+    background: #D2001C
+    color: #fff
+    font-family: 'SF Pro Display'
+    font-weight: 500
+    font-size: 16px
+    line-height: 44px
+    text-align: center
+    letter-spacing: -0.7px
+    border: none
+    outline: none
+    border-radius: 4px
+  &__subtext
+    margin-top: 20px
+    width: 280px
+    display: block
+    color: #C4C4C4
+    font-size: 14px
+
+  &__descr
+    width: 710px
+  &__text
+    width: 100%
+    color: #4D4D4D
+    margin-top: 60px
+    font-weight: 500
+    font-size: 16px
+    line-height: 19px
+    text-align: justify
+    letter-spacing: -0.7px
+    span
+      color: #D2001C
+      text-decoration: underline
+    &:nth-child(1)
+      margin-top: 0
+
+.company//--------COMPANY-------------------------->
+    padding: 70px calc(50vw - 620px)
+    font-family: 'SF Pro Display'
+    &__wrapper
+      display: flex
+      justify-content: space-between
+    &__title
+      display: inline-block
+      width: 22%
+      margin: 0
+      font-weight: 500
+      font-size: 24px
+      line-height: 29px
+      // position: relative
+    span
+      width: 80%
+      margin-left: 22%
+      display: inline-block
+      height: 1px
+      background: #000
+      transform: translateY(-23px)
+
+    &__about
+      position: relative
+      margin-top: 50px
+      display: block
+      font-size: 16px
+      line-height: 19px
+      color: #4D4D4D
+      &:after
+        display: block
+        position: absolute
+        content: ''
+        width: 7px
+        height: 7px
+        border-top: 2px solid #000
+        border-right: 2px solid #000
+        transform: rotate(45deg)
+        right: -18px
+        top: 5px
+        cursor: pointer
+      &:hover
+        color: #D2001C
+        &:after
+          border-top: 2px solid #D2001C
+          border-right: 2px solid #D2001C
+        
+.aboutUs//----------ABOUTUS-------------------------->
+  background: #E5E5E5
+  width: 100%
+  height: auto
+  padding: 70px 0 63px 0
+  &__title
+    font-family: SF Pro Display
+    font-weight: normal
+    font-size: 36px
+    line-height: 43px
+  &__items
+    display: flex
+    justify-content: space-between
+  &__item
+    flex-basis: 45%
+    height: 320px
+  &__video
+    width: 100%
+    height: 100%
+
+@import media

@@ -1,0 +1,110 @@
+@media (max-width: 1200px)
+	.header
+		// &__input
+		// 	width: 420px
+		&__top
+			font-size: 1.1em	
+		&__wrapper
+			justify-content: center
+		&__header
+			&__btn-basket
+			width: 140px
+		&__img
+			display: none
+
+@media screen and (max-width: 992px)
+	.company
+		padding: 40px
+		padding-bottom: 30px
+		&__wrapper
+			flex-direction: column
+			text-align: center
+		&__about
+			margin-top: 25px
+			&:after
+				display: none
+		span
+			display: none
+		&__title
+			width: 100%
+			text-align: center
+			text-decoration: underline
+	
+	.container
+		max-width: 992px
+		margin: 0 auto
+	
+	.header
+		&__logo
+			padding-left: 70px
+		&__logo-text
+			display: none
+		&__btn-search
+			top: 2px
+		&__btn-basket
+			margin-left: 25px
+		&__btn-inter
+			margin-left: 40px
+	.burger
+		display: block
+
+	
+	.drdown
+		&__links
+			display: none
+		&__item:nth-child(1)
+    		display: none
+    	 &__col
+    		&:nth-child(2)
+      		flex:  0 0 80%
+
+	.team3D
+    	&__items
+    		flex-wrap: wrap   
+    	&__job 	
+    		text-align: center
+    		margin: 0 auto	
+    	&__subtext
+    		text-align: center
+    		margin: 20px auto	
+    	&__descr
+    		margin: 0 auto
+    		padding: 20px
+
+
+@media screen and (max-width: 768px)
+	.container
+		max-width: 768px
+	.drdown
+    	&__col
+    		&:nth-child(2)
+      		flex:  0 0 62.5%
+	.aboutUs
+		padding: 20px 0 30px 0
+		&__items
+			display: block
+		&__item
+			margin-top: 20px
+	.header
+		&__btn-inter
+			display: none
+		&__btn-basket
+			display: none
+		&__write
+			display: none
+		&__director
+			display: none
+		&__date
+			display: none
+
+@media (max-width: 576px)
+	.container
+		max-width: 576px
+	
+	.header
+		&__soc
+			display: none
+		&__logo
+			&-img
+    			width: 50px
+
